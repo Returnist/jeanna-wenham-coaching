@@ -27,7 +27,7 @@ window.SITE = {
    * PACKAGES & PAYMENTS
    * For each package, create a Stripe Payment Link (Stripe dashboard → Payment Links → New)
    * and paste the URL into paymentLink. Set the link's "After payment" redirect to
-   * https://YOUR-DOMAIN/thank-you.html  (full steps in SETUP.md)
+   * https://jeannawenhamcoaching.com/thank-you.html  (full steps in SETUP.md)
    * Packages with no paymentLink show an "Enquire to book" button instead.
    */
   currency: "£",

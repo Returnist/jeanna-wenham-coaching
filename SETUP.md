@@ -15,10 +15,10 @@ bottom corner, listing whatever is still missing. Visitors to the live site neve
    - Single Session, Career Transition Programme, Confidence & Resilience, with the prices she wants.
 3. **Create a Payment Link for each one:** Payment Links → New → choose the product.
    - Under **After payment**, choose "Don't show confirmation page" and redirect to
-     `https://YOUR-DOMAIN/thank-you.html`
+     `https://jeannawenhamcoaching.com/thank-you.html`
    - Optional: tick "Collect customers' phone numbers".
    - Recommended: tick **Require customers to accept your terms of service** (first add
-     `https://YOUR-DOMAIN/terms.html` under Settings → Public details).
+     `https://jeannawenhamcoaching.com/terms.html` under Settings → Public details).
 4. Copy each link (looks like `https://buy.stripe.com/...`) into the matching package's
    `paymentLink` in `config.js`. That package's button changes to **"Book & pay securely"**.
 5. **Optional, for tailored packages and invoices:** create one more Payment Link, choose

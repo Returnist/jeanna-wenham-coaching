@@ -9,7 +9,7 @@ Open `index.html` in a browser to preview it.
 - **bookingLink**: optional Calendly or Cal.com link for free consultations.
 - **packages**: prices are PLACEHOLDERS (£95 / £480 / £260). Set real ones, then set `pricesConfirmed: true`.
 - **paymentLink**: for each package, create a Stripe Payment Link and paste its URL.
-  In Stripe, set "After payment" to redirect to `https://YOUR-DOMAIN/thank-you.html`.
+  In Stripe, set "After payment" to redirect to `https://jeannawenhamcoaching.com/thank-you.html`.
   Packages without a link show "Enquire to book".
 
 Previewing the site locally shows a "Before going live" checklist of anything still missing (never shown on the live site).
@@ -32,4 +32,4 @@ Static site: no build step, no framework. Connect the GitHub repo to either host
 
 Both serve `404.html` for missing pages automatically. Security headers are set in `_headers`
 (Cloudflare) and `vercel.json` (Vercel). Every push to `main` redeploys the site.
-After adding a custom domain, update the Stripe "After payment" redirect to `https://YOUR-DOMAIN/thank-you.html`.
+After adding a custom domain, update the Stripe "After payment" redirect to `https://jeannawenhamcoaching.com/thank-you.html`.
