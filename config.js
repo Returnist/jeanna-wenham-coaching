@@ -49,7 +49,7 @@ window.SITE = {
       price: 180,
       sessions: 1,
       blurb: "A focused session to work through one specific challenge or decision.",
-      features: ["60 minutes, online or in person", "Pre-session reflection questions", "Written summary and next steps"],
+      features: ["2 hours, online or in person", "Pre-session reflection questions", "Written summary and next steps"],
       paymentLink: "",
       featured: false
     },
