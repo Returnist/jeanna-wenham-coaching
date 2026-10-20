@@ -50,7 +50,7 @@ window.SITE = {
       sessions: 1,
       blurb: "A focused session to work through one specific challenge or decision.",
       features: ["2 hours, online or in person", "Pre-session reflection questions", "Written summary and next steps"],
-      paymentLink: "",
+      paymentLink: "https://buy.stripe.com/14A9AVactbdic4I1HNeME00",
       featured: false
     },
     {
