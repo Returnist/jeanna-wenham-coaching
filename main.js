@@ -75,10 +75,11 @@
       var card = el("div", { class: "price-card reveal" + (p.featured ? " featured" : "") });
       if (p.featured) card.appendChild(el("span", { class: "tag" }, "Most popular"));
       card.appendChild(el("h3", {}, p.name));
-      var price = el("div", { class: "price" }, S.currency + p.price);
+      var hasPrice = typeof p.price === "number";
+      var price = el("div", { class: "price" }, hasPrice ? S.currency + p.price : "On request");
       price.appendChild(el("small", {}, p.sessions > 1 ? p.sessions + " sessions" : "per session"));
       card.appendChild(price);
-      var per = p.sessions > 1 ? "Works out at " + S.currency + Math.round(p.price / p.sessions) + " per session" : "Pay as you go";
+      var per = !hasPrice ? "Get in touch for current pricing" : p.sessions > 1 ? "Works out at " + S.currency + Math.round(p.price / p.sessions) + " per session" : "Pay as you go";
       card.appendChild(el("p", { class: "per" }, per));
       card.appendChild(el("p", { class: "blurb" }, p.blurb));
       var ul = el("ul");

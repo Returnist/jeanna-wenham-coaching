@@ -56,7 +56,7 @@ window.SITE = {
     {
       id: "transition",
       name: "Career Transition Programme",
-      price: 900,
+      price: null,      // set the new price, then add its Stripe link
       sessions: 6,
       blurb: "For a promotion, a new role or a change of direction: clarity, a plan and the confidence to act.",
       features: ["Six 60-minute sessions", "Strengths and values exploration", "CV, LinkedIn and interview preparation", "Email support between sessions"],
@@ -66,7 +66,7 @@ window.SITE = {
     {
       id: "confidence",
       name: "Confidence & Resilience",
-      price: 495,
+      price: null,      // set the new price, then add its Stripe link
       sessions: 3,
       blurb: "Rebuild self-belief and manage workplace pressure so you can show up as your best self.",
       features: ["Three 60-minute sessions", "Practical tools for stress and pressure", "Your personal confidence plan"],
