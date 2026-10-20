@@ -92,7 +92,7 @@ section { padding: 104px 0; }
 }
 .site-header.scrolled { border-bottom-color: var(--line); box-shadow: 0 6px 24px -18px rgba(29, 40, 48, .3); }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 76px; }
-.logo { font-family: var(--serif); font-size: 1.9rem; color: var(--ink); text-decoration: none; letter-spacing: -.01em; }
+.logo { font-family: "DM Serif Display", var(--serif); font-size: 1.9rem; color: var(--ink); text-decoration: none; letter-spacing: -.01em; }
 .logo:hover { color: var(--ink); }
 .logo span { color: var(--gold); font-style: italic; }
 .nav ul { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; align-items: center; }
