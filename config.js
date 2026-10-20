@@ -59,7 +59,7 @@ window.SITE = {
       price: null,      // set the new price, then add its Stripe link
       sessions: 6,
       blurb: "For a promotion, a new role or a change of direction: clarity, a plan and the confidence to act.",
-      features: ["Six 60-minute sessions", "Strengths and values exploration", "CV, LinkedIn and interview preparation", "Email support between sessions"],
+      features: ["Six 2-hour sessions", "Strengths and values exploration", "CV, LinkedIn and interview preparation", "Email support between sessions"],
       paymentLink: "",
       featured: true
     },
