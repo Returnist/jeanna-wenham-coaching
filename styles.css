@@ -349,6 +349,35 @@ textarea { min-height: 140px; resize: vertical; }
 .next-steps b { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--gold); font-size: 1.2rem; line-height: 1.4; }
 .notice .hero-actions { justify-content: center; }
 
+/* Executive Transition Audit */
+.audit-q { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 8px; }
+.audit-q h2 { margin-top: .2em; }
+.audit-num { font-family: var(--serif); font-style: italic; font-size: 1.6rem; color: var(--gold); margin: 24px 0 0; }
+.audit-q ul { margin: 16px 0; }
+.audit-q li { margin-bottom: 6px; }
+.audit-write { display: none; }
+.audit-rate { font-weight: 600; color: var(--accent) !important; }
+.audit-scores { list-style: none; padding: 0 !important; display: grid; gap: 12px; }
+.audit-scores li { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; }
+.audit-cta { margin-top: 48px; }
+.audit-sign { margin-top: 40px; font-size: .85rem; color: var(--muted) !important; }
+.print-only { display: none; }
+.audit-band { background: var(--sand); }
+.audit-band .wrap { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.audit-band h2 { margin-bottom: .3em; }
+.audit-band p { margin: 0; color: var(--muted); max-width: 620px; }
+@media print {
+  .site-header, .site-footer, .no-print, .skip-link, .setup-check { display: none !important; }
+  .print-only { display: block; }
+  body { background: #fff; font-size: 11pt; }
+  .page-hero { padding: 0 0 12px; background: none; }
+  .page { padding: 0; }
+  .audit-q { break-inside: avoid-page; margin-top: 24px; }
+  .audit-write { display: block; height: 7.5em; margin: 12px 0; background: repeating-linear-gradient(transparent 0 1.85em, #cfc6b8 1.85em calc(1.85em + 1px)); }
+  .audit-scores li, .audit-cta { break-inside: avoid; box-shadow: none; }
+  a { color: inherit; }
+}
+
 /* Local setup checklist (only shown when previewing locally) */
 .setup-check {
   position: fixed; right: 16px; bottom: 16px; z-index: 90; width: 330px; max-width: calc(100vw - 32px); color: var(--ink);
