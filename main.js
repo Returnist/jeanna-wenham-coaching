@@ -157,7 +157,6 @@
     if (S.email) parts.push('<a href="mailto:' + S.email + '">' + S.email + "</a>");
     if (S.phone) parts.push('<a href="tel:' + S.phone.replace(/\s/g, "") + '">' + S.phone + "</a>");
     if (S.linkedin) parts.push('<a href="' + S.linkedin + '" target="_blank" rel="noopener">LinkedIn</a>');
-    if (S.businessAddress) parts.push(S.businessAddress);
     if (parts.length) foot.innerHTML = parts.join("<br>");
   }
   document.querySelectorAll("[data-address]").forEach(function (n) {
