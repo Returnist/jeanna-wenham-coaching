@@ -92,7 +92,7 @@ section { padding: 104px 0; }
 }
 .site-header.scrolled { border-bottom-color: var(--line); box-shadow: 0 6px 24px -18px rgba(29, 40, 48, .3); }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 76px; }
-.logo { font-family: var(--serif); font-size: 1.45rem; color: var(--ink); text-decoration: none; letter-spacing: -.01em; }
+.logo { font-family: var(--serif); font-size: 1.9rem; color: var(--ink); text-decoration: none; letter-spacing: -.01em; }
 .logo:hover { color: var(--ink); }
 .logo span { color: var(--gold); font-style: italic; }
 .nav ul { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; align-items: center; }
@@ -316,7 +316,7 @@ textarea { min-height: 140px; resize: vertical; }
 .site-footer { background: var(--ink); color: #aab5bc; padding: 64px 0 32px; font-size: .92rem; }
 .site-footer a { color: #e6ecef; text-decoration: none; }
 .site-footer a:hover { color: var(--gold-light); }
-.site-footer .logo { color: #fff; font-size: 1.5rem; }
+.site-footer .logo { color: #fff; font-size: 1.9rem; }
 .site-footer h4 { font-family: var(--sans); font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); font-weight: 600; margin-bottom: 14px; }
 .site-footer p { margin: 10px 0 0; line-height: 1.9; }
 .site-footer h4 + p { margin-top: 0; }
@@ -373,6 +373,7 @@ textarea { min-height: 140px; resize: vertical; }
   .trust-bar { margin-top: 56px; justify-content: flex-start; }
 }
 @media (max-width: 760px) {
+  .logo { font-size: 1.6rem; }
   body { font-size: 16px; }
   section { padding: 68px 0; }
   .section-head { margin-bottom: 40px; }
