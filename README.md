@@ -23,4 +23,13 @@ Previewing the site locally shows a "Before going live" checklist of anything st
 - Check the wording of the cancellation and refund policy in `terms.html` and `privacy.html` (it also appears in the FAQ in `index.html`).
 
 ## Hosting
-Upload the folder to any static host (Netlify drop, Cloudflare Pages, GitHub Pages) under her own account and domain.
+Static site: no build step, no framework. Connect the GitHub repo to either host:
+
+- **Cloudflare Pages**: Workers & Pages → Create → Pages → Connect to Git → pick this repo.
+  Framework preset: *None*. Build command: *(leave empty)*. Build output directory: `/`.
+- **Vercel**: Add New → Project → import this repo. Framework preset: *Other*. Leave build
+  and output settings empty.
+
+Both serve `404.html` for missing pages automatically. Security headers are set in `_headers`
+(Cloudflare) and `vercel.json` (Vercel). Every push to `main` redeploys the site.
+After adding a custom domain, update the Stripe "After payment" redirect to `https://YOUR-DOMAIN/thank-you.html`.
