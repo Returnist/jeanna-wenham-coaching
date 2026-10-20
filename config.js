@@ -33,7 +33,7 @@ window.SITE = {
   currency: "£",
 
   // The prices below are PLACEHOLDERS. Set the real ones, then change this to true.
-  pricesConfirmed: false,
+  pricesConfirmed: true,
 
   // Optional Stripe Payment Link where the customer types the amount ("Customers choose what
   // to pay"). Used for tailored packages and invoices. Shown under the packages when set.
@@ -46,7 +46,7 @@ window.SITE = {
     {
       id: "single",
       name: "Single Session",
-      price: 95,
+      price: 180,
       sessions: 1,
       blurb: "A focused session to work through one specific challenge or decision.",
       features: ["60 minutes, online or in person", "Pre-session reflection questions", "Written summary and next steps"],
@@ -56,7 +56,7 @@ window.SITE = {
     {
       id: "transition",
       name: "Career Transition Programme",
-      price: 480,
+      price: 900,
       sessions: 6,
       blurb: "For a promotion, a new role or a change of direction: clarity, a plan and the confidence to act.",
       features: ["Six 60-minute sessions", "Strengths and values exploration", "CV, LinkedIn and interview preparation", "Email support between sessions"],
@@ -66,7 +66,7 @@ window.SITE = {
     {
       id: "confidence",
       name: "Confidence & Resilience",
-      price: 260,
+      price: 495,
       sessions: 3,
       blurb: "Rebuild self-belief and manage workplace pressure so you can show up as your best self.",
       features: ["Three 60-minute sessions", "Practical tools for stress and pressure", "Your personal confidence plan"],
