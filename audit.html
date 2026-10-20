@@ -38,10 +38,22 @@
       <h1>The Executive Transition Audit</h1>
       <p class="lead">Five questions every senior leader should ask before their next career move.</p>
       <p class="hero-actions no-print"><button type="button" class="btn" id="print-audit">Download or print as PDF</button></p>
+      <form id="audit-gate" class="form-card audit-gate no-print" novalidate hidden>
+        <h2>Get your free copy</h2>
+        <p>Enter your name and email to read the audit now.</p>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-row">
+          <div><label for="gate-name">Name</label><input id="gate-name" name="name" required autocomplete="name"></div>
+          <div><label for="gate-email">Email</label><input id="gate-email" name="email" type="email" required autocomplete="email"></div>
+        </div>
+        <label class="consent"><input type="checkbox" id="gate-consent" name="consent" required> <span>I agree to Jeanna using my details to send me the audit and follow up once by email, as described in the <a href="privacy.html">privacy notice</a>.</span></label>
+        <button type="submit" class="btn">Read the audit</button>
+        <p class="form-status" id="gate-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 
-  <section class="page audit">
+  <section class="page audit" id="audit-content">
     <div class="wrap">
       <p>The higher you go, the more each career move costs, and the fewer people you can talk to honestly about it. A promotion, a new organisation or a change of direction can be the best decision you ever make. It can also be a move made for the wrong reasons, at the wrong time, without the support you need.</p>
       <p>I've spent more than 20 years in senior HR, watching leaders make these decisions from the other side of the table. The ones who thrive have usually asked themselves a few hard questions first. This audit gives you those questions.</p>

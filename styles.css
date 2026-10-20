@@ -350,6 +350,8 @@ textarea { min-height: 140px; resize: vertical; }
 .notice .hero-actions { justify-content: center; }
 
 /* Executive Transition Audit */
+.audit-gate { max-width: 640px; margin-top: 28px; }
+.audit-gate h2 { font-size: 1.4rem; margin-bottom: .3em; }
 .audit-q { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 8px; }
 .audit-q h2 { margin-top: .2em; }
 .audit-num { font-family: var(--serif); font-style: italic; font-size: 1.6rem; color: var(--gold); margin: 24px 0 0; }

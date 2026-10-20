@@ -16,9 +16,10 @@ window.SITE = {
   businessAddress: "35 Harebell Close, Milton Keynes, MK7 7BA",  // e.g. "Jeanna Wenham Coaching, 1 Example Street, Milton Keynes MK7 0AA"
   directoryProfile: "https://www.lifecoach-directory.org.uk/lifecoaches/jeanna-wenham",
 
-  // Contact form: create a free form at https://formspree.io and paste its endpoint here.
-  // Left empty, the form opens the visitor's email app instead (needs `email` above).
-  formEndpoint: "",     // e.g. "https://formspree.io/f/abcdwxyz"
+  // Where the contact form and the audit sign-up are sent (FormSubmit, no account needed).
+  // Messages arrive at the address at the end. Left empty, the contact form opens the
+  // visitor's email app instead and the audit is shown without asking for details.
+  formEndpoint: "https://formsubmit.co/ajax/coachingwithjeanna@gmail.com",
 
   // Online booking for the free consultation (Cal.com or Calendly). Optional.
   bookingLink: "",      // e.g. "https://cal.com/jeanna-wenham/free-consultation"

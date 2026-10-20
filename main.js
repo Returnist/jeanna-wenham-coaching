@@ -179,6 +179,14 @@
     document.querySelectorAll("[data-booking]").forEach(function (a) { a.href = S.bookingLink; a.hidden = false; });
   }
 
+  // Send a form to the form service; rejects unless it confirms delivery
+  function send(data) {
+    return fetch(S.formEndpoint, { method: "POST", body: data, headers: { Accept: "application/json" } })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) {
+        if (!r.ok || j.success === false || j.success === "false") throw new Error();
+      }); });
+  }
+
   // Contact form
   var form = $("contact-form");
   if (form) {
@@ -192,7 +200,7 @@
         return;
       }
       var data = new FormData(form);
-      if (data.get("_gotcha")) return;
+      if (data.get("_honey")) return;
 
       if (!S.formEndpoint) {
         if (!S.email) {
@@ -211,9 +219,9 @@
       submit.disabled = true;
       status.textContent = "Sending…";
       data.append("_subject", "Coaching enquiry: " + data.get("interest"));
-      fetch(S.formEndpoint, { method: "POST", body: data, headers: { Accept: "application/json" } })
-        .then(function (r) {
-          if (!r.ok) throw new Error();
+      data.append("_template", "table");
+      send(data)
+        .then(function () {
           form.reset();
           status.textContent = "Thank you. Your message has been sent and Jeanna will be in touch within two working days.";
           status.classList.add("ok");
@@ -226,6 +234,43 @@
     });
   }
 
+  // Executive Transition Audit: ask for name and email before showing it (remembered on this device)
+  var gate = $("audit-gate");
+  if (gate && S.formEndpoint) {
+    var unlocked = false;
+    try { unlocked = localStorage.getItem("auditUnlocked") === "1"; } catch (e) {}
+    var unlock = function () {
+      gate.hidden = true;
+      $("audit-content").hidden = false;
+      $("print-audit").hidden = false;
+      try { localStorage.setItem("auditUnlocked", "1"); } catch (e) {}
+    };
+    if (!unlocked) {
+      $("audit-content").hidden = true;
+      $("print-audit").hidden = true;
+      gate.hidden = false;
+      var gateStatus = $("gate-status");
+      gate.addEventListener("submit", function (e) {
+        e.preventDefault();
+        gateStatus.className = "form-status";
+        if (!gate.checkValidity() || !$("gate-consent").checked) {
+          gateStatus.textContent = "Please enter your name and a valid email, and tick the box.";
+          gateStatus.classList.add("err");
+          return;
+        }
+        var data = new FormData(gate);
+        if (data.get("_honey")) return;
+        data.append("_subject", "Executive Transition Audit download: " + data.get("name"));
+        data.append("_template", "table");
+        var btn = gate.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        gateStatus.textContent = "One moment…";
+        // Show the audit even if sending fails, so nobody is locked out
+        send(data).catch(function () {}).then(function () { unlock(); window.scrollTo(0, gate.offsetTop - 100); });
+      });
+    }
+  }
+
   // Setup checklist: only visible when previewing the site locally, never to visitors
   var local = location.protocol === "file:" || /^(localhost|127\.|0\.0\.0\.0)/.test(location.hostname) || /[?&]setup\b/.test(location.search);
   if (local && $("price-grid")) {
@@ -233,7 +278,7 @@
     if (!S.email) todo.push("Email address");
     if (!S.phone) todo.push("Phone number");
     if (!S.businessAddress) todo.push("Business address (legally required to sell online)");
-    if (!S.formEndpoint) todo.push("Formspree form endpoint");
+    if (!S.formEndpoint) todo.push("Form endpoint (formEndpoint)");
     if (!S.bookingLink) todo.push("Cal.com booking link (optional)");
     if (!S.pricesConfirmed) todo.push("Confirm real prices (currently placeholders)");
     var unpaid = (S.packages || []).filter(function (p) { return !p.paymentLink; }).map(function (p) { return p.name; });

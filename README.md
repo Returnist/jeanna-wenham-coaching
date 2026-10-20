@@ -5,7 +5,7 @@ Open `index.html` in a browser to preview it.
 
 ## Before going live: edit `config.js` (step-by-step guide in SETUP.md)
 - **email / phone / linkedin / businessAddress**: real contact details. These are blank for now and are hidden until filled in.
-- **formEndpoint**: create a free form at formspree.io and paste its endpoint here. Without it, the contact form opens the visitor's email app.
+- **formEndpoint**: set to FormSubmit, which emails contact form messages and audit sign-ups to coachingwithjeanna@gmail.com. Without it, the contact form opens the visitor's email app.
 - **bookingLink**: optional Calendly or Cal.com link for free consultations.
 - **packages**: prices are PLACEHOLDERS (£95 / £480 / £260). Set real ones, then set `pricesConfirmed: true`.
 - **paymentLink**: for each package, create a Stripe Payment Link and paste its URL.

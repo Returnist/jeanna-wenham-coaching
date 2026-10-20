@@ -33,15 +33,15 @@ bottom corner, listing whatever is still missing. Visitors to the live site neve
 To test first, switch Stripe to **Test mode**, make test links, and pay with card `4242 4242 4242 4242`
 (any future date and any CVC). Swap in the live links when she's happy.
 
-## 2. Formspree: contact form messages to her inbox
+## 2. FormSubmit: contact form and audit sign-ups to her inbox
 
-1. Sign up at **formspree.io** with the email she wants messages sent to (free: 50 messages a month).
-2. New form → copy the endpoint, e.g. `https://formspree.io/f/abcdwxyz`.
-3. Paste it into `formEndpoint` in `config.js`.
-4. Send a test message from the site. The first one asks her to confirm her email.
+Already set up: `formEndpoint` in `config.js` is `https://formsubmit.co/ajax/coachingwithjeanna@gmail.com`.
+No account is needed. The first message sent triggers a one-off "Activate form" email to that
+address; click the button in it and every message after that is delivered.
 
-Every enquiry then arrives as an email with the person's name, email, phone, topic and message.
-Until this is set up, the form opens the visitor's own email app instead (this only works once `email` is filled in).
+Every enquiry arrives as an email with the person's name, email, phone, topic and message.
+Every audit download (`audit.html`) arrives as an email with the person's name and email.
+To send them somewhere else, change the address at the end of `formEndpoint` (and activate again).
 
 ## 3. Cal.com: online booking for the free consultation
 
@@ -71,5 +71,6 @@ footer and the coaching terms.
 | Event | Notification |
 |---|---|
 | Someone pays | Stripe email and phone app alert |
-| Someone sends the contact form | Formspree email |
+| Someone sends the contact form | FormSubmit email |
+| Someone downloads the audit | FormSubmit email |
 | Someone books a consultation | Cal.com email and calendar invite |
