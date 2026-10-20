@@ -8,12 +8,12 @@ window.SITE = {
   tagline: "Career & Confidence Coaching",
 
   // Contact details (shown in the Contact section and footer once filled in)
-  email: "",            // e.g. "hello@jeannawenham.co.uk"
+  email: "coachingwithjeanna@gmail.com",  // e.g. "hello@jeannawenham.co.uk"
   phone: "",            // e.g. "07700 900000"
   linkedin: "",         // e.g. "https://www.linkedin.com/in/..."
   // UK law requires anyone selling online to show a postal address. A business or
   // correspondence address is fine; it doesn't have to be a home address.
-  businessAddress: "",  // e.g. "Jeanna Wenham Coaching, 1 Example Street, Milton Keynes MK7 0AA"
+  businessAddress: "35 Harebell Close, Milton Keynes, MK7 7BA",  // e.g. "Jeanna Wenham Coaching, 1 Example Street, Milton Keynes MK7 0AA"
   directoryProfile: "https://www.lifecoach-directory.org.uk/lifecoaches/jeanna-wenham",
 
   // Contact form: create a free form at https://formspree.io and paste its endpoint here.
