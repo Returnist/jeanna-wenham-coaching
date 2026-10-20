@@ -5,7 +5,7 @@
  */
 window.SITE = {
   name: "Jeanna Wenham",
-  tagline: "Career & Confidence Coaching",
+  tagline: "Executive & Leadership Coaching",
 
   // Contact details (shown in the Contact section and footer once filled in)
   email: "coachingwithjeanna@gmail.com",  // e.g. "hello@jeannawenham.co.uk"
