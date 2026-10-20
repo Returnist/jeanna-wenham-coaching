@@ -146,7 +146,6 @@
   if (list) {
     if (S.email) addRow("email", el("a", { href: "mailto:" + S.email }, S.email));
     if (S.phone) addRow("phone", el("a", { href: "tel:" + S.phone.replace(/\s/g, "") }, S.phone));
-    addRow("pin", "Milton Keynes (MK7) · Bedford (MK40) · Online");
     if (S.linkedin) addRow("link", el("a", { href: S.linkedin, target: "_blank", rel: "noopener" }, "Connect on LinkedIn"));
   }
 
